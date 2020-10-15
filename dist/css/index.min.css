@@ -1,0 +1,79 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#box {
+  width: 400px;
+  height: 600px;
+  margin: auto;
+  position: relative;
+  border: 1px solid black;
+}
+
+#box .top {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  border: 1px solid blue;
+}
+
+#box .top .mark_l {
+  width: 200px;
+  height: 400px;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+}
+
+#box .top .mark_r {
+  width: 200px;
+  height: 400px;
+  background: pink;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 0;
+}
+
+#div #box .top .mark_r {
+  background: gray;
+}
+
+nav a {
+  color: red;
+}
+
+header nav a {
+  color: pink;
+}
+
+#top_nav_li {
+  border-style: solid;
+  border-left-width: 4px;
+  border-left-color: #888888;
+  border-right-width: 3px;
+  border-right-color: yellow;
+}
+
+/*
+    这个注释会一起编译到css中
+    页面字符统一设置为18像素
+*/
+body {
+  font-size: 16px;
+}
+
+#pox {
+  font: 16px / 1.5;
+}
+
+#pox {
+  font: 16px / 1.5;
+}
+
+#list {
+  border-top: 1px dotted blue;
+}

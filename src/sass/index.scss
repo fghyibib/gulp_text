@@ -1,0 +1,80 @@
+//导入公共样式
+@import 'public';
+
+#box{
+    width: 400px;
+    height: 600px;
+    margin: auto;
+    position: relative;
+    border: 1px solid black;
+    .top{
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        border: 1px solid blue;
+        .mark_l{
+            width: 200px;
+            height: 400px;
+            position: absolute;
+            z-index: 1;
+            opacity: 0;
+        }
+        .mark_r{
+            width: 200px;
+            height: 400px;
+            background: pink;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+            opacity: 0;
+            // & : #box .top .mark_r
+            #div &{
+                background: gray;
+            }
+        }
+    }
+}
+
+nav a{
+    color: red;
+    // &代表从当前所在位置开始所有的祖先选择器
+    header &{
+        color: pink;
+    }
+}
+
+#top_nav_li{
+    border : {
+        style : solid;
+        left : {
+            width: 4px;
+            color: #888888;
+        }
+        right: {
+            width: 3px;
+            color: yellow;
+        }
+    }
+}
+
+/*
+    这个注释会一起编译到css中
+    页面字符统一设置为18像素
+*/
+body{
+    font-size: $fontSize; //变量的一般调用 （以值的方式调用） 仅限于sass中
+}
+
+#pox{
+    font: #{$fontSize} / #{$lineHeight}; //变量的特殊调用（以属性的方式调用）
+}
+
+#pox{
+    font : #{$fontSize} / #{$lineHeight};   //变量的特殊调用（以属性的方式调用）
+}
+
+$borderDirection: top ;
+ #list{
+     border-#{$borderDirection}:1px dotted blue;
+ }

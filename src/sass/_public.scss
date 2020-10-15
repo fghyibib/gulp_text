@@ -1,0 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+//变量、数组、函数、宏定义（混合器） 建议放到公共样式
+$fontSize : 16px !default; //!default 默认值设置
+$lineHeight : 1.5;
